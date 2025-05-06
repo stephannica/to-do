@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import dateAndHour from "../../utils/dateAndHour";
+import { ModeToggle } from "./DarkMode/mode-toggle";
 
 function Header() {
   const [date, setDate] = useState(dateAndHour());
@@ -12,8 +13,9 @@ function Header() {
   }, []);
 
   return (
-    <header>
+    <header className="flex justify-around p-5 font-IBMPlexMono">
       <p>{date}</p>
+      <ModeToggle/>
     </header>
   );
 }
